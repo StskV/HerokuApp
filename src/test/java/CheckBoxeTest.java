@@ -6,14 +6,14 @@ import org.testng.asserts.SoftAssert;
 import java.util.List;
 
 public class CheckBoxeTest extends BaseTest {
-    private final By checkboxLocator = By.cssSelector("[type=checkbox]");
+    private final By CHECKBOX_LOCATOR = By.cssSelector("[type=checkbox]");
 
     @Test
     public void checkUncheckedAndCheckedCheckboxes() {
         SoftAssert softAssert = new SoftAssert();
         driver.get("https://the-internet.herokuapp.com/checkboxes");
 
-        List<WebElement> checkboxes = driver.findElements(checkboxLocator);
+        List<WebElement> checkboxes = driver.findElements(CHECKBOX_LOCATOR);
         WebElement firstCheckbox = checkboxes.get(0);
         WebElement secondCheckbox = checkboxes.get(1);
 
